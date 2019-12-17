@@ -5,6 +5,6 @@
 <property name="hibernate.connection.password"></property>
 <property name="hibernate.connection.username">root</property>
 <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-<mapping class="hibernate.test.dto.Alumno"></mapping>
+<mapping class="hibernate.test.dto.mapeo"></mapping>
 </session-factory>
 </hibernate-configuration>

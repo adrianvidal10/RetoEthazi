@@ -1,9 +1,11 @@
-package Hibernate;
+package hibernate;
 
 import java.io.File;
 
-public class SessionFactory {
-	
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
 	private static final SessionFactory sessionFactory = buildSessionFactory();
 
 	private static SessionFactory buildSessionFactory()
@@ -14,16 +16,14 @@ public class SessionFactory {
 
 	// Crear el SessionFactory desde el archivo de configuracion
 
-	return new AnnotationConfiguration().configure(
-
-	new File("hibernate.cgf.xml")).buildSessionFactory();
+	return new Configuration().configure(new File("hibernate.cgf.xml")).buildSessionFactory();
 
 	} catch (Throwable ex) {
 
 	System.err.println("Initial SessionFactory creation failed." + ex);
 
 	throw new ExceptionInInitializerError(ex);
-//indignado
+
 	}
 
 	}
@@ -39,6 +39,4 @@ public class SessionFactory {
 	getSessionFactory().close();
 
 	}
-
 }
-
