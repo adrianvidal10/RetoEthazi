@@ -23,7 +23,7 @@ public class SessionFactory {
 	System.err.println("Initial SessionFactory creation failed." + ex);
 
 	throw new ExceptionInInitializerError(ex);
-
+//indignado
 	}
 
 	}
