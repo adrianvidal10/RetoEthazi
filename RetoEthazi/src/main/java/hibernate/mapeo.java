@@ -2,14 +2,21 @@ package hibernate;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 @Entity
-@org.hibernate.annotations.Entity(optimisticLock= OptimistickLockType.ALL)
 @Table(name="alumno")
 
 
 public class mapeo implements Serializable{
 
-	@Id
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name="Id",nullable=false,length=5)
 	private int Id;
 	
