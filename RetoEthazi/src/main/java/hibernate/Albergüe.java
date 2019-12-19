@@ -8,10 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="alumno")
+@Table(name="albergüe")
 
 
-public class mapeo implements Serializable{
+public class Albergüe implements Serializable{
 
 	/**
 	 * 
@@ -23,25 +23,18 @@ public class mapeo implements Serializable{
 	@Column(name="Id",length=5)
 	private int Id;
 	
-	@Column(name="Nombre",length=15, nullable = false)
+	@Column(name="Nombre",length=30, nullable = false)
 	private String Nombre;
 	
-	@Column(name="Apellido",length=15, nullable = false)
-	private String Apellido;
-	
-	@Column(name="Edad",length=3, nullable = false)
-	private int Edad;
-	
-	public mapeo() {
+	public Albergüe() {
 		
 	}
 	
-	public mapeo(int Id,String Nombre,String Apellido,int Edad) {
+	public Albergüe(int Id,String Nombre) {
 		
 		this.Id=Id;
 		this.Nombre=Nombre;
-		this.Apellido=Apellido;
-		this.Edad=Edad;
+		
 	}
 	
 	
@@ -68,28 +61,5 @@ public class mapeo implements Serializable{
 		this.Nombre = Nombre;
 
 		}
-	
-	
-	public String getApellido() {
-		
-		return Apellido;
-	}
-	
-	
-	public void setApellido(String Apellido) {
-		
-		this.Apellido=Apellido;
-	}
-	
-	
-	public int getEdad() {
-		
-		return Edad;
-	}
-	
-	
-	public void setEdad(int Edad) {
-		
-		this.Edad=Edad;
-	}
 }
+
