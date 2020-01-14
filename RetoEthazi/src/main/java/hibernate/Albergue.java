@@ -21,7 +21,7 @@ public class Albergue implements Serializable{
 	@Id
 	@GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY )
 	@Column(name="Id",length=5)
-	private int Id;
+	private String Id;
 	
 	@Column(name="Nombre",length=30, nullable = false)
 	private String Nombre;
@@ -30,7 +30,7 @@ public class Albergue implements Serializable{
 		
 	}
 	
-	public Albergue(int Id,String Nombre) {
+	public Albergue(String Id,String Nombre) {
 		
 		this.Id=Id;
 		this.Nombre=Nombre;
@@ -44,7 +44,7 @@ public class Albergue implements Serializable{
 	}
 	
 	
-	public void setId(int Id) {
+	public void setId(String Id) {
 		
 		this.Id=Id;
 	}
