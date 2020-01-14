@@ -3,16 +3,13 @@ package hibernate;
 import org.hibernate.Session;
 
 public class Main {
+	static Session session = HibernateUtil.getSessionFactory().openSession();
 	public static void main(String[] args) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		session.beginTransaction();
-		// Añadir un nuevo objeto alumno
-		mapeo alum = new mapeo();
-		alum.setId(6);
-		alum.setNombre("demo");
-		alum.setApellido("user");
-		alum.setEdad(1);
-		session.save(alum);
+		insertarAlumno();
+		insertarAlojamientos();
+		insertarAlbergues();
+		insertarCamping();
+		
 
 		
 		Albergüe alb = new Albergüe();
@@ -34,5 +31,27 @@ public class Main {
 		
 		session.getTransaction().commit();
 		HibernateUtil.shutdown();
+	}
+	private static void insertarCamping() {
+		// TODO Auto-generated method stub
+		
+	}
+	private static void insertarAlbergues() {
+		// TODO Auto-generated method stub
+		
+	}
+	private static void insertarAlojamientos() {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void insertarAlumno() {
+		session.beginTransaction();
+		// Añadir un nuevo objeto alumno
+		mapeo alum = new mapeo();
+		alum.setId(6);
+		alum.setNombre("demo");
+		alum.setApellido("user");
+		alum.setEdad(1);
+		session.save(alum);
 	}
 }
