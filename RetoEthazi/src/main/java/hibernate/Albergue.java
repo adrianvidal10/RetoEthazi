@@ -38,7 +38,7 @@ public class Albergue implements Serializable{
 	}
 	
 	
-	public int getId() {
+	public String getId() {
 		
 		return Id;
 	}

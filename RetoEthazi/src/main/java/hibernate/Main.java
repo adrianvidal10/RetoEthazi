@@ -20,10 +20,12 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+import main.java.hibernate.CogerdatosXml;
+
 public class Main {
 	static Session session = HibernateUtil.getSessionFactory().openSession();
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws TransformerConfigurationException, SAXException, ParserConfigurationException, IOException {
 		CogerdatosXml guardar = new CogerdatosXml();
 		Main fichero = new Main();
 		
@@ -40,7 +42,7 @@ public class Main {
 
 		
 		Albergue alb = new Albergue();
-		alb.setId(6);
+		alb.setId("alb6");
 		alb.setNombre("Primer Albergüe");		
 		session.save(alb);		
 
