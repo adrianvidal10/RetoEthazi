@@ -9,7 +9,7 @@ public class Main {
 		insertarAlojamientos();
 		insertarAlbergues();
 		insertarCamping();
-		System.out.println("hola");
+		
 
 		
 		Albergue alb = new Albergue();
