@@ -12,7 +12,7 @@ public class Main {
 		
 
 		
-		Albergüe alb = new Albergüe();
+		Albergue alb = new Albergue();
 		alb.setId(6);
 		alb.setNombre("Primer Albergüe");		
 		session.save(alb);		

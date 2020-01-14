@@ -8,10 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="albergüe")
+@Table(name="albergue")
 
 
-public class Albergüe implements Serializable{
+public class Albergue implements Serializable{
 
 	/**
 	 * 
@@ -26,11 +26,11 @@ public class Albergüe implements Serializable{
 	@Column(name="Nombre",length=30, nullable = false)
 	private String Nombre;
 	
-	public Albergüe() {
+	public Albergue() {
 		
 	}
 	
-	public Albergüe(int Id,String Nombre) {
+	public Albergue(int Id,String Nombre) {
 		
 		this.Id=Id;
 		this.Nombre=Nombre;
