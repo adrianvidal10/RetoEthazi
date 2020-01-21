@@ -23,7 +23,7 @@ import org.xml.sax.SAXException;
 import metodos.CogerdatosXml;
 
 public class Main {
-	static Session session = HibernateUtil.getSessionFactory().openSession();
+	//static Session session = HibernateUtil.getSessionFactory().openSession();
 	
 	public static void main(String[] args) throws TransformerConfigurationException, SAXException, ParserConfigurationException, IOException {
 		CogerdatosXml guardar = new CogerdatosXml();
